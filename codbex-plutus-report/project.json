@@ -1,6 +1,13 @@
 {
     "guid": "codbex-plutus-review",
-    "dependencies": [],
+    "dependencies": [
+        {
+            "guid": "codbex-assets",
+            "type": "git",
+            "url": "https://github.com/codbex/codbex-assets",
+            "branch": "main"
+        }
+    ],
     "actions": [
         {
             "name": "Build TypeScript",
