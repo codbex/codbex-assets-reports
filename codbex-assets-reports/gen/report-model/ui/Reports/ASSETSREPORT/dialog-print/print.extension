@@ -1,0 +1,5 @@
+{
+    "extensionPoint": "codbex-assets-reports-custom-action",
+    "module": "codbex-assets-reports/gen/report-model/ui/Reports/ASSETSREPORT/dialog-print/print.js",
+    "description": "Print ASSETSREPORT Report"
+}

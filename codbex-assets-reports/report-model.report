@@ -1,15 +1,163 @@
 {
-    "name": "MYREPORT",
-    "alias": "mt",
-    "table": "MYTABLE",
+    "name": "ASSETSREPORT",
+    "alias": "CODBEX_ASSET",
+    "table": "CODBEX_ASSET",
     "columns": [
         {
-            "alias": "Customer",
-            "name": "CUSTOMER_NAME",
-            "type": "VARCHAR",
+            "table": "CODBEX_ASSET",
+            "alias": "assetName",
+            "name": "ASSET_NAME",
+            "type": "CHARACTER VARYING",
             "aggregate": "NONE",
-            "table": "mt",
-            "select": true
+            "select": true,
+            "grouping": false
+        },
+        {
+            "table": "CODBEX_ASSET",
+            "alias": "assetValue",
+            "name": "ASSET_VALUE",
+            "type": "DECIMAL",
+            "aggregate": "NONE",
+            "select": true,
+            "grouping": false
+        },
+        {
+            "table": "CODBEX_ASSET",
+            "alias": "assetAccumulatedvalue",
+            "name": "ASSET_ACCUMULATEDVALUE",
+            "type": "DECIMAL",
+            "aggregate": "NONE",
+            "select": true,
+            "grouping": false
+        },
+        {
+            "table": "CODBEX_ASSET",
+            "alias": "assetMaintenencecost",
+            "name": "ASSET_MAINTENENCECOST",
+            "type": "DECIMAL",
+            "aggregate": "NONE",
+            "select": true,
+            "grouping": false
+        },
+        {
+            "table": "CODBEX_MAINTENANCE",
+            "alias": "maintenanceAsset",
+            "name": "MAINTENANCE_ASSET",
+            "type": "INTEGER",
+            "aggregate": "NONE",
+            "select": true,
+            "grouping": false
+        },
+        {
+            "table": "CODBEX_MAINTENANCE",
+            "alias": "maintenanceMaintenancedate",
+            "name": "MAINTENANCE_MAINTENANCEDATE",
+            "type": "DATE",
+            "aggregate": "NONE",
+            "select": true,
+            "grouping": false
+        },
+        {
+            "table": "CODBEX_MAINTENANCE",
+            "alias": "maintenanceDescription",
+            "name": "MAINTENANCE_DESCRIPTION",
+            "type": "CHARACTER VARYING",
+            "aggregate": "NONE",
+            "select": true,
+            "grouping": false
+        },
+        {
+            "table": "CODBEX_MAINTENANCE",
+            "alias": "maintenanceCost",
+            "name": "MAINTENANCE_COST",
+            "type": "DECIMAL",
+            "aggregate": "NONE",
+            "select": true,
+            "grouping": false
+        },
+        {
+            "table": "CODBEX_VALUATION",
+            "alias": "valuationAsset",
+            "name": "VALUATION_ASSET",
+            "type": "INTEGER",
+            "aggregate": "NONE",
+            "select": true,
+            "grouping": false
+        },
+        {
+            "table": "CODBEX_VALUATION",
+            "alias": "valuationValuationdate",
+            "name": "VALUATION_VALUATIONDATE",
+            "type": "DATE",
+            "aggregate": "NONE",
+            "select": true,
+            "grouping": false
+        },
+        {
+            "table": "CODBEX_VALUATION",
+            "alias": "valuationValuedat",
+            "name": "VALUATION_VALUEDAT",
+            "type": "DECIMAL",
+            "aggregate": "NONE",
+            "select": true,
+            "grouping": false
+        },
+        {
+            "table": "CODBEX_DEPRECIATION",
+            "alias": "depreciationAsset",
+            "name": "DEPRECIATION_ASSET",
+            "type": "INTEGER",
+            "aggregate": "NONE",
+            "select": true,
+            "grouping": false
+        },
+        {
+            "table": "CODBEX_DEPRECIATION",
+            "alias": "depreciationDepreciationdate",
+            "name": "DEPRECIATION_DEPRECIATIONDATE",
+            "type": "DATE",
+            "aggregate": "NONE",
+            "select": true,
+            "grouping": false
+        },
+        {
+            "table": "CODBEX_DEPRECIATION",
+            "alias": "depreciationAnnualdepreciation",
+            "name": "DEPRECIATION_ANNUALDEPRECIATION",
+            "type": "DECIMAL",
+            "aggregate": "NONE",
+            "select": true,
+            "grouping": false
+        },
+        {
+            "table": "CODBEX_DEPRECIATION",
+            "alias": "depreciationAccumulateddepreciation",
+            "name": "DEPRECIATION_ACCUMULATEDDEPRECIATION",
+            "type": "DECIMAL",
+            "aggregate": "NONE",
+            "select": true,
+            "grouping": false
+        }
+    ],
+    "query": "SELECT CODBEX_ASSET.ASSET_NAME as \"assetName\", CODBEX_ASSET.ASSET_VALUE as \"assetValue\", CODBEX_ASSET.ASSET_ACCUMULATEDVALUE as \"assetAccumulatedvalue\", CODBEX_ASSET.ASSET_MAINTENENCECOST as \"assetMaintenencecost\", CODBEX_MAINTENANCE.MAINTENANCE_ASSET as \"maintenanceAsset\", CODBEX_MAINTENANCE.MAINTENANCE_MAINTENANCEDATE as \"maintenanceMaintenancedate\", CODBEX_MAINTENANCE.MAINTENANCE_DESCRIPTION as \"maintenanceDescription\", CODBEX_MAINTENANCE.MAINTENANCE_COST as \"maintenanceCost\", CODBEX_VALUATION.VALUATION_ASSET as \"valuationAsset\", CODBEX_VALUATION.VALUATION_VALUATIONDATE as \"valuationValuationdate\", CODBEX_VALUATION.VALUATION_VALUEDAT as \"valuationValuedat\", CODBEX_DEPRECIATION.DEPRECIATION_ASSET as \"depreciationAsset\", CODBEX_DEPRECIATION.DEPRECIATION_DEPRECIATIONDATE as \"depreciationDepreciationdate\", CODBEX_DEPRECIATION.DEPRECIATION_ANNUALDEPRECIATION as \"depreciationAnnualdepreciation\", CODBEX_DEPRECIATION.DEPRECIATION_ACCUMULATEDDEPRECIATION as \"depreciationAccumulateddepreciation\"\nFROM CODBEX_ASSET as CODBEX_ASSET\n  INNER JOIN CODBEX_MAINTENANCE CODBEX_MAINTENANCE ON CODBEX_ASSET.ASSET_ID = CODBEX_MAINTENANCE.MAINTENANCE_ID\n  INNER JOIN CODBEX_VALUATION CODBEX_VALUATION ON CODBEX_ASSET.ASSET_ID = CODBEX_VALUATION.VALUATION_ID\n  INNER JOIN CODBEX_DEPRECIATION CODBEX_DEPRECIATION ON CODBEX_ASSET.ASSET_ID = CODBEX_DEPRECIATION.DEPRECIATION_ID",
+    "joins": [
+        {
+            "alias": "CODBEX_MAINTENANCE",
+            "name": "CODBEX_MAINTENANCE",
+            "type": "INNER",
+            "condition": "CODBEX_ASSET.ASSET_ID = CODBEX_MAINTENANCE.MAINTENANCE_ID"
+        },
+        {
+            "alias": "CODBEX_VALUATION",
+            "name": "CODBEX_VALUATION",
+            "type": "INNER",
+            "condition": "CODBEX_ASSET.ASSET_ID = CODBEX_VALUATION.VALUATION_ID"
+        },
+        {
+            "alias": "CODBEX_DEPRECIATION",
+            "name": "CODBEX_DEPRECIATION",
+            "type": "INNER",
+            "condition": "CODBEX_ASSET.ASSET_ID = CODBEX_DEPRECIATION.DEPRECIATION_ID"
         }
     ]
 }

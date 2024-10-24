@@ -1,0 +1,5 @@
+{
+    "module": "codbex-assets-reports/gen/report-model/ui/Reports/perspective.js",
+    "extensionPoint": "portal",
+    "description": "codbex-assets-reports - Perspective - Reports"
+}
