@@ -1,0 +1,5 @@
+{
+    "extensionPoint": "codbex-assets-reports-custom-action",
+    "module": "codbex-assets-reports/gen/report-maintenance/ui/Reports/ASSET_MAINTENANCE_STATUS_REPORT/dialog-print/print.js",
+    "description": "Print ASSET_MAINTENANCE_STATUS_REPORT Report"
+}

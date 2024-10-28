@@ -1,0 +1,14 @@
+{
+  "brand": "codbex",
+  "brandUrl": "https://codbex.com",
+  "title": "Asset Acquisition and Disposal Summary",
+  "projectName": "codbex-assets-reports",
+  "workspaceName": "workspace",
+  "filePath": "report-acquisition-disposal.report",
+  "templateId": "template-application-ui-angular/template/template-report-file.js",
+  "fileName": "report-acquisition-disposal",
+  "genFolderName": "report-acquisition-disposal",
+  "extensionPoint": "codbex-assets-reports",
+  "name": "ASSET_ACQUISITION_DISPOSAL_REPORT",
+  "perspectiveName": "ASSET_ACQUISITION_DISPOSAL_REPORT"
+}

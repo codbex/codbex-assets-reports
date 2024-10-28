@@ -1,5 +1,0 @@
-{
-    "module": "codbex-assets-reports/gen/report-model/ui/Reports/perspective.js",
-    "extensionPoint": "codbex-assets-reports",
-    "description": "codbex-assets-reports - Perspective - Reports"
-}

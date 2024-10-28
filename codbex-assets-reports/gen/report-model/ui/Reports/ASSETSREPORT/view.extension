@@ -1,5 +1,0 @@
-{
-    "module": "codbex-assets-reports/gen/report-model/ui/Reports/ASSETSREPORT/view.js",
-    "extensionPoint": "codbex-assets-reports-view",
-    "description": "codbex-assets-reports - Application View"
-}

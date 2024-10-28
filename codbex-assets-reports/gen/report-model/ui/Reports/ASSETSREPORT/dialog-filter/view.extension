@@ -1,5 +1,0 @@
-{
-    "module": "codbex-assets-reports/gen/report-model/ui/Reports/ASSETSREPORT/dialog-filter/view.js",
-    "extensionPoint": "codbex-assets-reports-dialog-window",
-    "description": "codbex-assets-reports - Application Dialog Window"
-}

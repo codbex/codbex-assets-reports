@@ -1,0 +1,5 @@
+{
+    "module": "codbex-assets-reports/gen/report-valuation-deprecation/ui/Reports/perspective.js",
+    "extensionPoint": "codbex-assets-reports",
+    "description": "codbex-assets-reports - Perspective - Reports"
+}

@@ -1,0 +1,14 @@
+{
+  "brand": "codbex",
+  "brandUrl": "https://codbex.com",
+  "title": "Asset Maintenance and Operational Status Report",
+  "projectName": "codbex-assets-reports",
+  "workspaceName": "workspace",
+  "filePath": "report-maintenance.report",
+  "templateId": "template-application-ui-angular/template/template-report-file.js",
+  "fileName": "report-maintenance",
+  "genFolderName": "report-maintenance",
+  "extensionPoint": "codbex-assets-reports",
+  "name": "ASSET_MAINTENANCE_STATUS_REPORT",
+  "perspectiveName": "ASSET_MAINTENANCE_STATUS_REPORT"
+}

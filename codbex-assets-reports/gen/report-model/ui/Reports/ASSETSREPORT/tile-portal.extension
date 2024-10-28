@@ -1,5 +1,0 @@
-{
-    "module": "codbex-assets-reports/gen/report-model/ui/Reports/ASSETSREPORT/tile.js",
-    "extensionPoint": "portal-tile",
-    "description": "codbex-assets-reports - Application Tile"
-}
